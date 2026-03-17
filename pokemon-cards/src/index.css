@@ -126,4 +126,10 @@ color:#38bdf8;
         align-items: center;
         width: auto;
     }
+    .stats{
+        display: flex;
+        gap: 5px;
+        font-size: 11px;
+       
+    }
 }
