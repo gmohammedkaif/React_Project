@@ -1,0 +1,129 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+background: linear-gradient(135deg,#0f172a,#020617);
+color:white;
+}
+
+/* Container */
+.container{
+width:90%;
+margin:auto;
+padding:30px;
+text-align:center;
+}
+
+/* Title */
+.title{
+font-size:42px;
+margin-bottom:20px;
+color:#38bdf8;
+text-shadow:0 0 10px rgba(56,189,248,0.6);
+}
+
+/* Search Box */
+.pokemon-search{
+margin-bottom:30px;
+}
+
+.pokemon-search input{
+width:300px;
+padding:12px;
+border-radius:8px;
+border:none;
+outline:none;
+font-size:16px;
+background:#1e293b;
+color:white;
+box-shadow:0 0 10px rgba(0,0,0,0.5);
+transition:0.3s;
+}
+
+.pokemon-search input:focus{
+box-shadow:0 0 12px #38bdf8;
+}
+
+/* Grid */
+.card-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+/* Card */
+.card{
+background:linear-gradient(145deg,#1e293b,#0f172a);
+padding:20px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.5);
+transition:0.3s;
+cursor:pointer;
+position:relative;
+overflow:hidden;
+}
+
+/* Glow hover */
+.card:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 15px 35px rgba(56,189,248,0.4);
+}
+
+/* Image */
+.pokemon-img{
+width:120px;
+height:120px;
+margin-bottom:10px;
+filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
+}
+
+/* Name */
+.pokemon-name{
+text-transform:capitalize;
+font-size:22px;
+margin-bottom:8px;
+color:#facc15;
+}
+
+/* Type */
+.pokemon-type{
+font-size:14px;
+margin-bottom:12px;
+opacity:0.8;
+text-transform:capitalize;
+}
+
+/* Stats */
+.stats{
+display:flex;
+justify-content:space-between;
+background:#020617;
+padding:10px;
+border-radius:8px;
+font-size:13px;
+}
+
+/* Loading/Error */
+.status{
+text-align:center;
+margin-top:100px;
+font-size:28px;
+color:#38bdf8;
+}
+
+@media(max-width : 450px){
+    .pokemon-search input{
+        width: auto;
+    }
+    .card-grid{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+}
